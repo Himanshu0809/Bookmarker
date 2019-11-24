@@ -4,9 +4,8 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     background: #FF4E50;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -20,91 +19,140 @@ background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, F
 /* Custom page header */
 .header {
     padding-bottom: 20px;
-    border-bottom: 1px solid #e5e5e5; 
+    margin-bottom: 30px;
+    border-bottom: 1px solid #970606; 
 }
+
 /* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+.header h1 {
+    margin-top: 0;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 0;
+    line-height: 80px;
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    padding-top: 19px;
+    color: black;
+    border-top: 1px solid red;
+    text-align: center;
+}
+
+.form-group{
+    text-align: left;
+    font-weight: 400;
+}
+.form-control{
+    padding:25px;
+}
+label{
+    font-size: 1.5em;
+}
+
+#bookmarksResults div{
+    padding:20px;
+    border-radius: 50px;
+    width: 100%;
+    border-top: 10px solid purple;
+    border-right: 10px solid purple; 
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                   
+}
+#bookmarksResults h3{
+    color: orange;
+    letter-spacing: 5px;
+    padding: 20px;
+    font-size: 2.5em;
+    font-weight: 1000;
+}
+#bookmarksResults h2{
+    text-align: center;
+    font-size: 3em;
+    color: black;
+    font-weight: 700;
 }
 
 /* Customize container */
 @media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+    .container {
+        max-width: 730px;
+    }
 }
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 10px solid orangered;
-  background: #780206;  /* fallback for old browsers */
+    border-radius: 50px;
+    text-align: center;
+    border-bottom: 10px solid orangered;
+    background: #780206;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-color:white;
-font-weight: 1000;
-
+    background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:white;
+    font-weight: 1000;
 }
+
 .jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-  background: orange;
-  color: black;
-  font-weight: 700;
-  margin:30px;
-  width: 80%;
-  border-bottom: 5px solid orangered;
+    padding: 14px 24px;
+    font-size: 21px;
+    background: orange;
+    color: black;
+    font-weight: 700;
+    margin:30px;
+    width: 80%;
+    border-bottom: 5px solid orangered;
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 }
 .marketing p + h4 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 10px solid orangered;
-    border-right: 10px solid orangered;
-  }
-  .jumbotron h2{
-      font-size: 2.3em;
-      line-height: 3em;
-      font-weight: 1000;
-  }
-  .jumbotron strong{
-      color: orange;
-  }
-}
-
- /* RD: making vertical align great again */
-.table > tbody > tr > td {
-     vertical-align: middle;
+    .header,
+    .marketing,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 10px solid orangered;
+        border-right: 10px solid orangered;
+    }
+    .jumbotron h2{
+        font-size: 2.3em;
+        line-height: 3em;
+        font-weight: 1000;
+    }
+    .jumbotron strong{
+        color: orange;
+    }
+    .header h1 {
+        margin-top: 0;
+        font-family: 'Gloria Hallelujah', cursive;
+        margin-bottom: 0;
+        line-height: 100px;
+        font-weight: 700;
+        font-size: 100px;
+    }
 }
