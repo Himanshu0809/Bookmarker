@@ -10,6 +10,10 @@ function saveBookmark(e) {
     var siteName = document.getElementById('siteName').value;
     var siteUrl = document.getElementById('siteUrl').value;
 
+    if(!validateForm(siteName, siteUrl)){
+        return false;
+    }
+
     //When we submit the form we will store it in the localstorage as an array of objects
     var bookmark = {
         name: siteName,
@@ -39,6 +43,10 @@ function saveBookmark(e) {
         //Re-set back to local storage
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
+
+    //Clear the form after submitting
+    document.getElementById('myForm').reset();
+
     //Re-fetch the bookmarks
     fetchBookmarks();
 
@@ -85,4 +93,23 @@ function fetchBookmarks() {
                                         '</div>';
 
     }
+}
+
+function validateForm(siteName, siteUrl){
+     //to check if the form is filled
+     if(!siteName||!siteUrl){
+        alert('Please fill in the form');
+        return false;
+    }
+
+    //to check if the url is valid we will use regular expression
+
+    var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    var regex = new RegExp(expression);
+ 
+    if(!siteUrl.match(regex)){
+        alert('Please use a valid URL');
+        return false;
+    }
+    return true;
 }
