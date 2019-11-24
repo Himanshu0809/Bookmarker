@@ -24,22 +24,65 @@ function saveBookmark(e) {
     localStorage.removeItem('test');   //remove from the local storage */
 
     //Test if bookmarks is null
-    if(localStorage.getItem('bookmarks')===null){
+    if (localStorage.getItem('bookmarks') === null) {
         //Init array
-        var bookmarks=[];
+        var bookmarks = [];
         //Add to array
         bookmarks.push(bookmark);
         //Set to local storage
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks)); //bookmarks is JSON array so it has to be converted to strings 
-    }else{
+    } else {
         //Get bookmarks from localstorage
-        var bookmarks=JSON.parse(localStorage.getItem('bookmarks')); //to convert string to JSON
+        var bookmarks = JSON.parse(localStorage.getItem('bookmarks')); //to convert string to JSON
         //Add the bookmark to array
         bookmarks.push(bookmark);
         //Re-set back to local storage
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
+    //Re-fetch the bookmarks
+    fetchBookmarks();
 
     //Prevent the form from submitting
     e.preventDefault();
+}
+
+//Delete bookMark
+function deleteBookmark(url) {
+    //get bookmarks from localstorage
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    //loop through bookmarks
+    for (var i = 0; i < bookmarks.length; i++) {
+        if (bookmarks[i].url == url) {
+            //Remove from array
+            bookmarks.splice(i, 1);
+        }
+    }
+    //Re-set back to local storage
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+    //Re-fetch the bookmarks
+    fetchBookmarks();
+}
+
+//Fetch bookmarks
+function fetchBookmarks() {
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks')); //to convert string to JSON
+
+    //get output id
+    var bookmarksResults = document.getElementById('bookmarksResults');
+
+    //Build output
+    bookmarksResults.innerHTML = '';
+    for (var i = 0; i < bookmarks.length; i++) {
+        var name = bookmarks[i].name;
+        var url = bookmarks[i].url;
+
+        bookmarksResults.innerHTML +=  '<div class="card card-body bg-light">' +
+                                        '<h3>' + name +
+                                        ' <a class="btn btn-primary" target="_blank" href="' + url + '"> Visit</a>' +
+                                        ' <a onclick="deleteBookmark(\'' + url + '\')" class="btn btn-danger" href="#"> Delete</a>' +
+                                        '</h3>' +
+                                        '</div>';
+
+    }
 }
