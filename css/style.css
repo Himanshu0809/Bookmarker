@@ -1,22 +1,26 @@
 /* CSS FILE */
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #FF4E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 /* Custom page header */
 .header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5; 
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -45,11 +49,23 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 10px solid orangered;
+  background: #780206;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color:white;
+font-weight: 1000;
+
 }
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
+  background: orange;
+  color: black;
+  font-weight: 700;
+  margin:30px;
+  width: 80%;
+  border-bottom: 5px solid orangered;
 }
 
 /* Supporting marketing content */
@@ -75,7 +91,16 @@ body {
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
-    border-bottom: 0;
+    border-bottom: 10px solid orangered;
+    border-right: 10px solid orangered;
+  }
+  .jumbotron h2{
+      font-size: 2.3em;
+      line-height: 3em;
+      font-weight: 1000;
+  }
+  .jumbotron strong{
+      color: orange;
   }
 }
 
