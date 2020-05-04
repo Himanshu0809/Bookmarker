@@ -9,9 +9,9 @@ A simple website bookmarker application to bookmark and save important links and
 
 ## SCREENSHOT
 
-![](img/ss2.png)
+![](images/ss2.png)
 
-![](img/ss1.png)
+![](images/ss1.png)
 
 
 ## CONTRIBUTE
