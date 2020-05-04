@@ -8,11 +8,9 @@ A simple website bookmarker application to bookmark and save important links and
 - **VANILLA JS**: plain JavaScript without any additional libraries like jQuery
 
 ## SCREENSHOT
-
 ![](images/ss2.png)
 
 ![](images/ss1.png)
-
 
 ## CONTRIBUTE
 Issues, PRs, and all your suggestions and discussions are welcomed!
